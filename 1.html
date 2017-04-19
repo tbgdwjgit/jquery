@@ -20,6 +20,13 @@
     td{     
       border:1px solid blue;     
     }
+    .testclass{
+      width: 50px; 
+      height: 50px; 
+      background:yellow;
+      margin:0 auto;
+    }
+
   </style>
 
   <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
@@ -85,6 +92,9 @@
 <p>点击我，我会消失。</p>  
 <p>也要点击我哦。</p> 
 
+<p id="feeds">加载文件</p>
+<input type="button" value="打开"/>
+
 	<script type="text/javascript" src="jqueryTest.js"> </script>  
   <script type="text/javascript">
       //alert(varTest);//变更全局
@@ -122,8 +132,25 @@
       //    alert($(this).text());
       // });
         
+      // $('a').each(function(){//遍历超链接
+      //    alert($(this).attr('href'));
+      // });
+      
+      // $("p").click(function(event) {
+      //   $('a').each(function(){//设置属性值
+      //    //alert($(this).attr("class","testclass"));
+      //     $(this).attr("class","testclass");
+      //   });
+      // });
 
+      // $("button").click(function(){//????????????
+      //    //$("#loadhtml").load('test.html');
+      //    $("#feeds").load("./123.txt");
+      // });
 
+     $("button").click(function(){
+        aler($("#feeds").text());
+     });
 
 
 
@@ -144,7 +171,7 @@
 
 
 
-      
+
 
 
 
