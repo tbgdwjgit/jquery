@@ -3,18 +3,13 @@
 // document.write(arr[0]);
 // document.write(arr[3]);
 
-var arr =[63,21,57,2,34];
+var arr =[13,11,33,57,62,34,55,23];
 
-function getMax(arr){
+function getMax(arr){//最大值
 	var swap=0;
 	for (var i = 0; i < arr.length; i++) {
-		for (var j = i+1; j < arr.length-1; j++) {
-			if (arr[i]>arr[j]) {				
-				swap = arr[i];
-			}else
-			{
-				swap = arr[j];
-			}
+		if (arr[i]>swap) {
+           swap = arr[i];
 		}
 	}
 	return swap;
