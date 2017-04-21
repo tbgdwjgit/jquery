@@ -15,13 +15,24 @@ function getMax(arr){//最大值
 	return swap;
 }
 
-// arr.prototype.getMax = getMax(arr);
-//arr.getMax();
+
+
+//Array.prototype.Max = getMax();
+Array.prototype.getMax =function(){//增加数组方法
+	var swap=0;
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i]>swap) {
+           swap = arr[i];
+		}
+	}
+	return swap;	
+}
+alert(arr.getMax());
 
 // arr.sort();//排序
 // for (var i = 0; i < arr.length; i++) {
 // 	alert(arr[i]);
 // }
 
-alert(getMax(arr));
+//alert(getMax(arr));
 
