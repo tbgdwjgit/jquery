@@ -6,6 +6,17 @@
 		Jquery 1
 	</title>
 	<style type="text/css">
+   /*
+   CSS有三大特性，分别是继承性，层叠性，优先级。
+   继承性是指指被包在内部的标签将拥有外部标签的样式性，即子元素可以继承父元素的属性。
+
+   层叠性就是浏览器处理冲突的一个特性，如果一个属性通过多个选择器设置到同一个元素上面，那么这个时候就会只有一个选择器起作用，
+   而其他的选择器都将背层叠掉，前提是选择器的权重一样，也就是说这些选择器的优先级相同。
+
+   优先级的顺序：行内样式>id选择器>类选择器>标签选择器>*通配符选择器>继承。
+
+   */
+
 		#Container{
     width:200px;
     height:200px;
@@ -19,6 +30,9 @@
     }
     td{     
       border:1px solid blue;     
+    }
+    h1{
+      color: yellow;
     }
     .testclass{
       width: 50px; 
@@ -43,6 +57,9 @@
   <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
   <script type="text/javascript" src="nine.js"> </script> <!--乘法表-->  
   <script type="text/javascript" src="./js/arrayTest.js"> </script>  <!--js数组测试-->
+  <script type="text/javascript" src="./js/stringTest.js"> </script>  <!--string测试-->
+  <script type="text/javascript" src="./js/objectTest.js"> </script>  <!--对象测试-->
+  <script type="text/javascript" src="./js/timeTest.js"> </script>  <!--时间测试-->
 
   <script> 
   var varTest=78;//全局参数
@@ -55,22 +72,20 @@
   </script>	
   
   </head>	
-  <body>
-	
-</body>	
-	<div id="myhide">
-		<div class="divTest">
-			<div style="width: 100px; height: 100px; background:green;margin:0 auto;" onclick = "myClick()">
+<body>	
+  <div id="myhide">
+    <div class="divTest">
+      <div style="width: 100px; height: 100px; background:green;margin:0 auto;" onclick = "myClick()">
       <h1 class="myclass"> <i>看到没有</i></h1>
       </div>
-		</div>
+    </div>
 
     <div class="divTest1">
       <div style="width: 100px; height: 100px; background:red;margin:0 auto;">
       <h1 class="myclass"> <i>看到没有</i></h1>
       </div>
     </div>   
-	</div>
+  </div>
 
   <dl>
   <dt>列表</dt>
@@ -78,7 +93,7 @@
   <dd>2.</dd>
   <dd>3.</dd>
   </dl>
-	
+  
   <ol type="A">
   <li>测试</li>
   <li>测试</li>
@@ -106,7 +121,9 @@
 <p id="feeds">加载文件</p>
 <input type="button" value="打开"/>
 
-	<script type="text/javascript" src="jqueryTest.js"> </script>  
+
+
+  <script type="text/javascript" src="jqueryTest.js"> </script>  
   <script type="text/javascript">
       //alert(varTest);//变更全局
 
@@ -174,8 +191,6 @@
 
 
 
-
-
       // $(".testp").click(function(event) {
       //    $(".testp").load("test.html");
       // }); 
@@ -183,20 +198,34 @@
 
 
 
-      var str ="321";
-      var str1="123"
-      // alert(parseInt(str)+parseInt(str1));//转换函数 parseInt parseFloat
-      // alert(str-str1);
-      //alert(Number(str)-Number(str1));//强制类型转换
+      // var str ="321";
+      // var str1="123"
+      // // alert(parseInt(str)+parseInt(str1));//转换函数 parseInt parseFloat
+      // // alert(str-str1);
+      // //alert(Number(str)-Number(str1));//强制类型转换
 
-      var str= '012.345 ';
-      //var x = str-0;
-      x = x*1;
-      alert(x);
+      // var str= '012.345 ';
+      // //var x = str-0;
+      // x = x*1;
+      // alert(x);
+
+
+
+
+
+
+
+
+
+
 
 
 
   </script>
   <div class="hotline24"><b>提交</b></div>
+
+
+</body>	
+
 
 </html>
